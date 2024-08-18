@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Delivery Details</title>
+    <link rel="stylesheet" href="public/stylesheets/buyerdets.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Client Delivery Details</h1>
+        <form  id="sellerclientdetsform" class="sellerclientdets" action="/sellerclientdets" method="POST"  enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" name="postalcode" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="contact" required>
+            
+            <label for="email">Set your Commission:</label>
+            <input type="text" id="commission" name="commission">
+            <p>Shipping Method: Cash on delivery</p>
+
+            <p>Shipping Charges: Rs 150</p>
+
+            <button type="submit">Confirm Order</button>
+        </form>
+        <div id="confirmation" class="hidden">
+            <h2>Thank you for your order!</h2>
+            <p>Your delivery details have been submitted.</p>
+        </div>
+    </div>
+
+    <script src="public/jsscripts/buyerdets.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("sellerclientdetsform");
+    
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+    
+                const formData = new FormData(form);
+    
+                try {
+                    const response = await fetch("/sellerclientdets", {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await response.json();
+    
+                    if (response.ok) {
+                        alert('Client Details saved successfully!');
+                        // window.location.href = "/sellerprofile";
+                        // Optionally, you can redirect to another page or clear the form here
+                        form.reset();
+                    } else {
+                        alert('Error saving details. Please try again.');
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert('Error saving details. Please try again.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

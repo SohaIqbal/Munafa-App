@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/stylesheets/style.css">
+    <link rel="stylesheet" href="public/stylesheets/profile.css">
+    <script src="https://kit.fontawesome.com/d6ae4d7428.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="main">
+        <section class="header">
+            <div class="landing">
+                <div class="picandname">
+                    <img src="public/images/logo.png" alt=""> 
+                    <p>Munafa</p>
+                </div>
+                <div class="atags">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="supplier.html">Become a supplier</a>                
+                </div>
+           </div>
+        </section>
+        <section class="balance">
+           <div class="updiv">
+              <h1>Current Balance</h1>
+           </div>
+           <hr>
+           <div class="downdiv">
+             <div class="div2">
+                <div class="profit">Rs.10,000</div>
+                
+             </div>
+           </div>
+        </section>
+        <section class="sales">
+            <div class="updiv">
+               <div class="money">Rs.0</div>
+               <p>Total sales</p>
+            </div>
+            <hr>
+            <div class="downdiv">
+              <div class="div1">
+                 <div class="orders">0</div>
+                 <p>Completed orders</p>
+              </div>
+              <div class="div2">
+                 <div class="profit">Rs.0</div>
+                 <p>Total profit</p>
+              </div>
+              <div class="div3">
+                 <div class="bonus">Rs.0</div>
+                 <p>Total bonus</p>
+              </div>
+            </div>
+         </section>
+
+    </div>
+         
+         <div class="but"><button id="createbutton">Create Product</button></div> 
+ 
+    <script src="../FRONTEND/public/jsscripts/j.js"></script>
+    <script src="../FRONTEND/public/jsscripts/profile.js"></script>
+    <script>
+        document.getElementById("createbutton").addEventListener("click", function() {
+    window.location.href = "createproduct.html";
+});
+    </script>
+    
+</body>
+</html>

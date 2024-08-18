@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #a9c0a6;
+}
+
+.heading{
+    width: 90%;
+    background-color: #CCDECB;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 5vw;
+    padding: 5vw 0vw;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+
+.heading h1{
+    color: #88AF98;
+    font-size: 4vw;
+}
+.para{
+    width: 90%;
+    background-color:#E2EBE3;
+    text-align: center;
+    font-size: 1vw;
+
+    padding: 10vw 0vw;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.para .inner{
+    width: 75%;
+    background: #CCDECB;
+    padding: 5vw 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 30px;
+    color: #88AF98;
+}
+.para h1{
+    font-size: 3vw;
+    margin-bottom: 1.5vw;
+}
+.para p{
+    font-size: 1.5vw;
+    text-align: start;
+}
+.para .inner .innerpara{
+    width: 90%;
+    margin: 0; 
+    line-height: 1.6; 
+}
+.para span{
+    font-size: 5vw;
+}

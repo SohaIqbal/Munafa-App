@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/stylesheets/style.css">
+    <link rel="stylesheet" href="public/stylesheets/supplier.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/d6ae4d7428.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="main">
+        <div id="cursor">
+            </div>
+            <section class="header">
+                <div class="landing">
+                    <div class="picandname">
+                        <img src="public/images/logo.png" alt=""> 
+                        <p>Munafa</p>
+                    </div>
+                    <div class="atags">
+                        <a href="index.html" class="active">Home</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="supplier.html">Become a supplier</a>
+                       
+
+                    </div>
+               </div>
+            </section>
+
+            <section id="suppliersection">
+                <div class="supplier">
+                    <h1># Become a Munafa Supplier</h1>
+                    <hr>
+                </div>
+            </section> 
+
+        <form class="applynow" id="seller-form" action="/createseller" method="POST"  enctype="multipart/form-data">
+                <div class="form">
+                    <div class="div6">
+                        <h4>Name <span>*</span></h4>
+                        <input type="text" name="name" placeholder="Muhammad Ali">
+                     
+                      
+                    </div>          
+        
+                    <div class="div6">
+                        <h4>Email <span>*</span></h4>
+                        <input type="email" name="email" placeholder="muhammadali@gmail.com" width="300px">
+
+                    </div>
+                    <div class="div6">
+                        <h4>Whatsapp phone number <span>*</span></h4>
+                        <input type="tel" name="contact" placeholder="03198769xxx" width="300px">
+                    </div>
+                    <div class="div6">
+                        <h4>Business name<span>*</span></h4>
+                        <input type="text" name="businessname" placeholder="Munafa" width="300px">
+                    </div>
+                    <div class="div6">
+                        <h4>City<span>*</span></h4>
+                        <input type="text" name="city" placeholder="karachi" width="300px">
+                    </div>
+                    <div class="div6">
+                        <h4>Address<span>*</span></h4>
+                        <input type="text" name="address" placeholder="House No , ABC road ,  karachi" width="300px">
+                    </div>
+                   
+                    <div class="div6">
+                        <label for="dropdown">How many product do you have? <span>*</span></label>
+                        <input type="text" name="productlist"  width="300px"></input>
+                    </div>
+                    <div class="div6">
+                        <label for="dropdown">How much stock of each product do you have?<span>*</span></label>
+                        <input type="text" name="stock"  width="300px"></input>
+                        
+                    </div>
+              
+                        <button class="submit" type="submit" id="submitinfo">Submit</button>
+                  
+                </div>
+                
+            </form>
+            <section class="last">
+                <hr>
+               <div class="in">
+                <p>Copyright® 2022 Markaz Inc. Pakistan</p>
+                <div class="vertical-line"></div>
+                <a href="termsandconditions.html">Terms and Conditions</a>
+                <div class="vertical-line"></div>
+                <a href="privacy.html">Privacy and Confidentiality</a>
+               </div>
+            </section>
+            
+           
+    </div>
+    <script src="j.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('seller-form');
+    
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+    
+                const formData = new FormData(form);
+    
+                try {
+                    const response = await fetch('/createseller', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await response.json();
+    
+                    if (response.ok) {
+                        alert('Seller created successfully!');
+                        window.location.href = "/sellerprofile";
+                        // Optionally, you can redirect to another page or clear the form here
+                        form.reset();
+                    } else {
+                        alert('Error creating seller. Please try again.');
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert('Error creating seller. Please try again.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

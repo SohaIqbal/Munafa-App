@@ -1,0 +1,229 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #9D8189;
+} */
+#suppliersection{
+    width: 100%;
+    padding: 7vw 5vw;
+    text-align: center;
+}
+#suppliersection .supplier{
+    width: 100%;
+
+}
+#suppliersection .supplier h1{
+    text-align: center;
+    font-size: 4vw;
+    color: #66967a;
+    
+    
+}
+hr{
+    margin-top: 1vw;
+    width: 50%;
+    margin-left: 23vw;
+    
+}
+
+button{
+    background-color:  #E2EBE3;
+    /* background-color: #cf8861; */
+    color: #66967A;
+    font-size: 1.6vw;
+    border-radius: 50px;
+    padding: 1vw 3vw;
+    margin-top: 4vw; 
+    font-weight: 500;
+    
+}
+ button:hover{
+    background-color:  #e2ebe349;
+    /* background-color: #cf8861; */
+    color: #427457;
+    transition: all .3s ease-in-out;
+}
+
+.applynow{
+    /* background-color: brown; */
+    width: 100%;
+    padding: 0vw 5vw;
+    /* padding-bottom: 10vw; */
+}
+ h1{
+    margin-top: 2vw;
+    font-size: 3vw;
+    text-align: center;
+    color: #648873;
+}
+.applynow .form{
+    width: 100%;
+    /* background-color: lightcoral; */
+    padding: 2vw 5vw;
+    margin-top: 2vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10vw;
+    font-size: 1.5vw;
+    color: #66967A !important;
+
+}
+.applynow .form .div1{
+    font-size: 1.7vw;
+    gap: 1vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.applynow .form .div2{
+    font-size: 1.7vw;
+    gap: 1vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.applynow .form input{
+    width: 30vw;
+    padding-bottom: .5vw;
+    font-size: 1vw;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+
+}
+
+
+.applynow .form .div1 input:hover{
+
+    border: transparent;
+
+}
+.applynow .form .div6 input:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    outline: none; 
+}
+select {
+    width: 34vw;
+    padding: .6vw;
+    font-size: 1.2vw;
+    background-color: transparent;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+}
+.applynow .form .div6{
+    gap: 1vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.applynow .form .div7{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3vw;
+
+}
+.applynow .form .div7 p{
+    margin-top: 2vw;
+    font-size: 1.7vw;
+}
+.applynow .form .div7 .check{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    margin-top: 2vw;
+
+  
+
+}
+.submit{
+    margin-bottom: 4vw;
+}
+.munafabenefits{
+    width: 70%;
+    padding: 0vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+    background-color: #edc9829d;
+    border-radius: 30px;
+    flex-wrap: wrap;
+    background-color: #E2EBE3;
+  
+}
+.infodiv{
+    text-align: center;
+    font-size: 3vw;
+}
+.munafabenefits .fe-box3{
+    /* background: #000; */
+    width: 13vw;
+    /* height: 13vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4vw 14vw;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    /* border: 1px solid rgba(255, 255, 255, 0.603); */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.munafabenefits .fe-box3 .fe-3-div1 {
+    background: #CCDECB;
+        border-radius: 30px;
+        width: 23vw;
+        font-size: 1.4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2vw;
+        padding: 2vw 2vw;
+     
+    
+    }
+.munafabenefits .fe-box3 .fe-3-div1 p{
+    font-size: 1.3vw;
+}
+.munafabenefits .fe-box3 .fe-3-div1 img{
+    width: 4vw;
+    
+    
+
+}
